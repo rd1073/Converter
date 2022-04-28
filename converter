@@ -1,0 +1,728 @@
+ #include<stdio.h>
+#include<math.h>
+#include<string.h>
+
+
+void Centimeters(float a){	
+	printf("%0.3f meters\n", a/100);
+	printf("%0.3f kilometers\n", a/100000);
+	printf("%0.3f millimeters\n", a*10);
+	printf("%0.3f micrometers\n", a*10000);
+	printf("%0.3e nanometers\n",  a*1e+7);
+	printf("%0.3f miles\n", a/160934);
+	printf("%0.3f yard\n", a/91.44);
+	printf("%0.3f feet\n", a/30.48);
+	printf("%0.3f inches\n", a/2.54);
+	printf("%0.6f nautical miles\n",  a/185200);
+}
+
+void Meters(float a){
+	printf("%0.3f centimeters\n", a*100);
+	printf("%0.3f kilometers\n", a/1000);
+	printf("%0.3f millimeters\n", a*1000);
+	printf("%0.3e micrometers\n", a*1e+6);
+	printf("%0.3e nanometers\n", a*1e+9);
+	printf("%0.3f miles\n",  a/1609); 
+	printf("%0.3f yard\n", a*1.094);
+	printf("%0.3f feet\n",a*3.281);
+	printf("%0.3f inches\n", a*39.37);
+	printf("%0.3f nautical miles\n", a/1852);} 
+
+void Kilometers(float a){
+	printf("%0.3f meters\n", a*1000);
+	printf("%0.3f centimeters\n", a*100000);
+	printf("%0.3e millimeters\n", a*1e+6);
+	printf("%0.3e micrometers\n", a*1e+9);
+	printf("%0.3e nanometers\n",  a*1e+12);
+	printf("%0.3f miles\n", a/1.609);
+	printf("%0.3f yard\n", a*1094);
+	printf("%0.3f feet\n", a*3281);
+	printf("%0.3f inches\n", a*39370);
+	printf("%0.6f nautical miles\n",  a/1.852);}
+
+void Millimeters(float a){
+	printf("%0.3f meters\n", a/1000);
+	printf("%0.3f centimeters\n", a/10);
+	printf("%0.3e kilometers\n", a/1e+6);
+	printf("%0.3f micrometers\n", a*1000);
+	printf("%0.3e nanometers\n",  a*1e+6);
+	printf("%0.3f miles\n", a/1.609e+6);
+	printf("%0.3f yard\n", a/914);
+	printf("%0.3f feet\n", a/305);
+	printf("%0.3f inches\n", a/25.4);
+	printf("%0.6e nautical miles\n",  a/1.852e+6);}
+
+void Micrometers(float a){
+	printf("%0.3e meters\n", a/1e+6);
+	printf("%0.3f centimeters\n", a/10);
+	printf("%0.3e kilometers\n", a/1e+9);
+	printf("%0.3f millimeters\n", a/1000);
+	printf("%0.3e nanometers\n",  a*1000);
+	printf("%0.3e miles\n", a/1.609e+9);
+	printf("%0.3f yard\n", a/914400);
+	printf("%0.3f feet\n", a/304800);
+	printf("%0.3f inches\n", a/25400);
+	printf("%0.6e nautical miles\n",  a/1.852e+9);}	
+
+void Nanometers(float a){
+	printf("%0.3e meters\n", a/1e+9);
+	printf("%0.3e centimeters\n", a/1e+7);
+	printf("%0.3e kilometers\n", a/1e+12);
+	printf("%0.3f micrometers\n", a/1000);
+	printf("%0.3e millimeters\n", a/1e+6);
+	printf("%0.3e miles\n", a/1.609e+12);
+	printf("%0.3e yard\n", a/9.144e+8);
+	printf("%0.3e feet\n", a/3048e+8);
+	printf("%0.3e inches\n", a/25.4e+7);
+	printf("%0.6e nautical miles\n",  a/1.852e+12);}
+
+void Mile(float a){
+	printf("%0.3f meters\n", a*1609);
+	printf("%0.3f centimeters\n", a*160934);
+	printf("%0.3f kilometers\n", a*1.609);
+	printf("%0.3e micrometers\n", a*1.609e+9);
+	printf("%0.3e millimeters\n", a*1609e+6);
+	printf("%0.3e nanometers\n", a*1.609e+12);
+	 
+	printf("%0.3f yard\n", a*1760);
+	printf("%0.3f feet\n", a*5280);
+	printf("%0.3f inches\n", a*63360);
+	printf("%0.6f nautical miles\n",  a/1.151);}
+
+
+void Yard(float a){
+	printf("%0.3f meters\n", a*100);
+	printf("%0.3f centimeters\n", a*91.44);
+	printf("%0.3f kilometers\n", a/1094);
+	printf("%0.3f micrometers\n", a*914400);
+	printf("%0.3f millimeters\n", a*914);
+	printf("%0.3e nanometers\n", a*9.144e+8);
+	printf("%0.3f mile\n", a/1760);
+	printf("%0.3f feet\n", a*3);
+	printf("%0.3f inches\n", a*36);
+	printf("%0.6f nautical miles\n",  a/2025);}
+
+
+void Foot(float a){
+	printf("%0.3f meters\n", a/3.281);
+	printf("%0.3f centimeters\n", a*30.48);
+	printf("%0.3f kilometers\n", a/3281);
+	printf("%0.3f micrometers\n", a*304800);
+	printf("%0.3f millimeters\n", a*305);
+	printf("%0.3e nanometers\n", a*3.048e+8);
+	printf("%0.3f mile\n", a/5280);
+	printf("%0.3f yard\n", a/3);
+	printf("%0.3f inches\n", a*12);
+	printf("%0.6f nautical miles\n",  a/6076);}
+
+
+void Inch(float a){
+	printf("%0.3f meters\n", a/39.37);
+	printf("%0.3f centimeters\n", a*2.54);
+	printf("%0.3f kilometers\n", a/39370);
+	printf("%0.3f micrometers\n", a*25400);
+	printf("%0.3f millimeters\n", a*25.4);
+	printf("%0.3e nanometers\n", a*2.54e+7);
+	printf("%0.3f mile\n", a*63360);
+	printf("%0.3f yard\n", a/36);
+	printf("%0.3f feet\n", a/12);
+	 
+	printf("%0.6f nautical miles\n",  a/72913);}
+	
+void NauticalMile(float a){
+	printf("%0.3f meters\n", a*1852);
+	printf("%0.3f centimeters\n", a*185200);
+	printf("%0.3f kilometers\n", a*1.852);
+	printf("%0.3f micrometers\n", a*1.852+9);
+	printf("%0.3e millimeters\n", a*1.852e+6);
+	printf("%0.3e nanometers\n", a*1.852e+12);
+	printf("%0.3f mile\n", a*1.151);
+	printf("%0.3f yard\n", a*2025);
+	printf("%0.3f feet\n", a*6076);
+	printf("%0.3f inches\n", a*72913);}
+
+	
+void Kilograms(float a){
+	 
+	 
+	printf("%0.3f grams\n", a*1000);
+	printf("%0.3e milligrams\n", a*1e+6);
+	printf("%0.3e micrograms\n", a*1e+9);
+	printf("%0.3f tonnes\n", a/1000);
+	 
+	printf("%0.3f pounds\n", a*2.205);}
+
+void Grams(float a){
+	printf("%0.3f kilograms\n", a*1000);
+	 
+	 
+	printf("%0.3f milligrams\n", a*1000);
+	printf("%0.3e micrograms\n", a*1e+6);
+	printf("%0.3e tonnes\n", a/1e+6);
+	 
+	printf("%0.3f pounds\n", a/454);}
+
+void Milligrams(float a){
+	printf("%0.3e kilograms\n", a/1e+6);
+	 
+	printf("%0.3f grams\n", a/1000);
+ 
+	printf("%0.3f micrograms\n", a*1000);
+	printf("%0.3e tonnes\n", a/1e+9);
+	 
+	printf("%0.3f pounds\n", a/453592);}
+	 
+void Micrograms(float a){
+	printf("%0.3e kilograms\n", a/1e+9);
+	 
+	printf("%0.3e grams\n", a*1e+6);
+	printf("%0.3f milligrams\n", a*1000);
+ 
+	printf("%0.3e tonnes\n", a/1e+12);
+	 
+	printf("%0.3e pounds\n", a/4.536e+8);}
+
+void Ton(float a){
+	printf("%0.3f kilograms\n", a*1000);
+	 
+	printf("%0.3e grams\n", a*1e+6);
+	printf("%0.3e milligrams\n", a*1e+9);
+	printf("%0.3e micrograms\n", a*1e+12);
+	 
+	 
+	printf("%0.3f pounds\n", a*2205);}
+ 
+void Pound(float a){
+	printf("%0.3f kilograms\n", a/2.205);
+	 
+	printf("%0.3f grams\n", a*454);
+	printf("%0.3f milligrams\n", a*453592);
+	printf("%0.3e micrograms\n", a*4.536e+8);
+	printf("%0.3f tonnes\n", a/2205);}
+ 
+void Celsius(float a){
+ 
+	 
+	printf("%0.3f farenheit\n", (a*1.8)+32);
+	printf("%0.3f kelvin\n", a+273.15);}
+
+void Farenheit(float a){
+	printf("%0.3f celsius\n", (a-32)*0.555-17.78);
+	 
+ 
+	printf("%0.3f kelvin\n", (a-32)*0.555+273.15);}
+
+void Kelvin(float a){
+	printf("%0.3f celsius\n", (a-273.15)*1.8+32);
+	 
+	printf("%0.3f farenheit\n", a-2);}
+	
+
+ 
+
+void Inr(float a){
+	printf("%0.3f USD\n", a*0.013);
+	printf("%0.3f EUR\n", a*0.012);
+	printf("%0.3f AUD\n", a*0.018);
+	printf("%0.3f GBP\n", a*0.010);
+	 }
+
+void Usd(float a){
+	 
+	printf("%0.3f INR\n", a*76.65);
+	 
+	printf("%0.3f EUR\n", a*0.93);
+	printf("%0.3f AUD\n", a*1.39);
+	printf("%0.3f GBP\n", a*0.78);
+ }
+
+void Eur(float a){
+	printf("%0.3f USD\n", a*1.07);
+	printf("%0.3f INR\n", a*82.30);
+	 
+	 
+	printf("%0.3f AUD\n", a*1.49);
+	printf("%0.3f GBP\n", a*0.84);
+	 }
+
+void Aud(float a){
+	printf("%0.3f USD\n", a*0.72);
+	printf("%0.3f INR\n", a*55.12);
+	 
+	printf("%0.3f EUR\n", a*0.67);
+	 
+	printf("%0.3f GBP\n", a*0.56);
+ }
+ 
+ void Gbp(float a){
+	printf("%0.3f USD\n", a*1.27);
+	printf("%0.3f INR\n", a*97.68);
+	 
+	printf("%0.3f EUR\n", a*1.19);
+	 
+	printf("%0.3f AUD\n", a*1.77);
+ }
+ 
+	
+
+ 
+int main(){
+	
+	
+	 
+	const float pi=3.1428;
+	float m,cm, km, mm,um,nm,mile,y,foot,inch,naum;
+	float inr,usd,eur,gbp,aud;
+	float kg,g,mg,ug,stone,pound,ounce,ton;
+	float deg,rad;
+	float c,f,k;
+	printf("WELCOME TO CONVERTER\n");
+	printf("\n");
+	printf("Length=1\nMass=2\nTemperature=3\nTrignometry=4\nCurrency=5\nPlane Angle=6\n");
+	int n;
+	printf("\n");
+	while(1){
+		
+		
+		printf("Enter number:");
+		scanf("%d", &n);
+		printf("\n");
+		if (n==1){
+			while(1){	
+				printf("------------------------------------------------------------------------------------------------------------------------");
+				printf("Meters=1\nCentimeters=2\nKilometers=3\nMillimeters=4\nMicrometers=5\nNanometers=6\nMile=7\nYard=8\nFoot=9\nInch=10\nNautical Mile=11\nPRESS 0 TO DO CONVERSION OF A DIFFERENT UNIT");
+				printf("\n");
+				printf("\n");
+				printf("Convert from:");
+				int l;
+				scanf("%d", &l);
+				if (l==1){
+					printf("Meters=");
+					scanf("%f", &m);
+					
+					printf("n");	
+					printf("%0.3f meters is\n",m);
+					Meters(m);
+					printf("\n");
+					printf("\n");}
+					
+				else if (l==2){
+					printf("Centimeters=");
+					
+					scanf("%f", &cm);
+					printf("\n");	
+					printf("%0.3f centimeters is\n",cm);
+					Centimeters(cm);
+					printf("\n");
+					printf("\n");
+					}
+					
+				else if (l==3){
+					printf("Kilometers=");
+					
+					scanf("%f", &km);
+					printf("\n");	
+					printf("%0.3f kilometers is\n",km);
+					Kilometers(km);
+					printf("\n");
+					printf("\n");				  }
+				
+				else if (l==4){
+					printf("Millimeters=");
+					
+					scanf("%f", &mm);
+					printf("\n");	
+					printf("%0.3f millimeters is\n",mm);
+					Millimeters(mm);
+					printf("\n");
+					printf("\n");
+					  }
+				
+				else if (l==5){
+					printf("Micrometers=");
+					
+					scanf("%f", &um);
+					printf("\n");	
+					printf("%0.3f micrometers is\n",um);
+					Micrometers(mm);
+					printf("\n");
+					printf("\n");
+					
+					  }
+					  
+					  
+				else if (l==6){
+					printf("Nanometers=");
+					
+					scanf("%f", &nm);
+					printf("\n");	
+					printf("%0.3f nanometers is\n",nm);
+					Nanometers(nm);
+					printf("\n");
+					printf("\n");
+					
+					  }
+				
+				else if (l==7){
+					printf("Miles=");
+					
+					scanf("%f", &mile);
+					printf("\n");	
+					printf("%0.3f miles is\n",mile);
+					Mile(mile);
+					printf("\n");
+					printf("\n");
+					
+					  }
+					  
+				else if (l==8){
+					printf("Yard=");
+					
+					scanf("%f", &y);
+					printf("\n");	
+					printf("%0.3f yards is\n",y);
+					Yard(y);
+					printf("\n");
+					printf("\n");
+					
+					  }
+					  
+				
+				else if (l==9){
+					printf("Feet=");
+					
+					scanf("%f", &foot);
+					printf("\n");	
+					printf("%0.3f feet is\n",foot);
+					Foot(foot);
+					printf("\n");
+					printf("\n");
+					
+					  }
+				
+				else if (l==10){
+					printf("Inches=");
+					
+					scanf("%f", &inch);
+					printf("\n");	
+					printf("%0.3f inches is\n",inch);
+					Inch(inch);
+					printf("\n");
+					printf("\n");
+					
+					  }
+				
+				else if (l==11){
+					printf("Nautical Miles=");
+					
+					scanf("%f", &naum);
+					printf("\n");	
+					printf("%0.3f nautical miles is\n",naum);
+					NauticalMile(naum);
+					printf("\n");
+					printf("\n");
+					
+					  }
+				else if (l==0){
+					break;}
+				else {
+					printf("Invalid,try again");
+					printf("\n");
+					break;}
+			 
+			 
+				}
+				
+				
+				}
+				
+		else if (n==2){
+			while(1){	
+				printf("------------------------------------------------------------------------------------------------------------------------");
+				printf("Kilogram=1\nGram=2\nMilligram=3\nMicrogram=4\nTonne=5\nPound=6\nPRESS 0 TO DO CONVERSION OF A DIFFERENT UNIT");
+				printf("\n");
+				printf("\n");
+				printf("Convert from:");
+				int mass;
+				scanf("%d", &mass);
+				if (mass==1){
+					printf("Kilograms=");
+					scanf("%f", &kg);
+					
+					printf("n");	
+					printf("%0.3f kilograms is\n",kg);
+					Kilograms(kg);
+					printf("\n");
+					printf("\n");}
+					
+				else if (mass==2){
+					printf("Grams");
+					
+					scanf("%f", &g);
+					printf("\n");	
+					printf("%0.3f grams is\n",g);
+					Grams(g);
+					printf("\n");
+					printf("\n");
+					}
+				
+				else if (mass==3){
+					printf("Milligrams");
+					
+					scanf("%f", &mg);
+					printf("\n");	
+					printf("%0.3f milligrams is\n",mg);
+					Milligrams(mg);
+					printf("\n");
+					printf("\n");
+					}
+				
+				else if (mass==4){
+					printf("Micrograms");
+					
+					scanf("%f", &ug);
+					printf("\n");	
+					printf("%0.3f micrograms is\n",ug);
+					Micrograms(ug);
+					printf("\n");
+					printf("\n");
+					}
+				
+				else if (mass==5){
+					printf("Tonnes");
+					
+					scanf("%f", &ton);
+					printf("\n");	
+					printf("%0.3f tonnes is\n",ton);
+					Ton(ton);
+					printf("\n");
+					printf("\n");
+					}
+				
+				else if (mass==6){
+					printf("Pounds");
+					
+					scanf("%f", &pound);
+					printf("\n");	
+					printf("%0.3f pounds is\n",pound);
+					Pound(pound);
+					printf("\n");
+					printf("\n");
+					}
+					
+				else if (mass==0){
+					break;}
+				else {
+					printf("Invalid,try again");
+					printf("\n");
+					break;}}}
+		
+		
+		
+		
+		
+		else if (n==3){
+			while(1){
+				printf("------------------------------------------------------------------------------------------------------------------------");
+				printf("Celsius=1\nFarenheit=2\nKelvin=3\nPRESS 0 TO DO CONVERSION OF A DIFFERENT UNIT");
+				printf("\n");
+				printf("\n");
+				printf("Convert from:");
+				int temp;
+				scanf("%d", &temp);
+				if (temp==1){
+					printf("Celsius=");
+					scanf("%f", &c);
+					
+					printf("\n");	
+					printf("%0.3f celsius is\n",c);
+					Celsius(c);
+					printf("\n");
+					printf("\n");}
+					
+				else if (temp==2){
+					printf("Farenheit");
+					
+					scanf("%f", &f);
+					printf("\n");	
+					printf("%0.3f farenheit is\n",f);
+					Farenheit(f);
+					printf("\n");
+					printf("\n");
+					}
+					
+				
+				else if (temp==3){
+					printf("Kelvin");
+					
+					scanf("%f", &k);
+					printf("\n");	
+					printf("%0.3f kelvin is\n",k);
+					Kelvin(k);
+					printf("\n");
+					printf("\n");
+					}
+				
+				else if (temp==0){
+					break;}
+				else {
+					printf("Invalid,try again");
+					printf("\n");
+					break;}}}
+				
+				
+		else if (n==4){
+				
+		 	while(1){
+		 		printf("\n------------------------------------------------------------------------------------------------------------------------");
+		 		printf("\nPRESS 0 TO DO CONVERSION OF A DIFFERENT UNIT");
+		 		
+		 		printf("\n");
+				printf("\n");
+				printf("Theta");
+				float theta;
+				scanf("%f", &theta);
+				if (theta!=0){
+					
+					printf("sin %f is %f\n", theta,sin(theta));
+					printf("cos %f is %f\n", theta,cos(theta));
+					printf("tan %f is %f\n", theta,tan(theta));}	
+				else if (theta==0){
+					break;}			
+		 	}}
+		
+		else if (n==5){
+			while(1){
+			
+				printf("------------------------------------------------------------------------------------------------------------------------");
+				printf("INR=1\nUSD=2\nEUR=3\nGBP=4\nAUD=5\nPRESS 0 TO DO CONVERSION OF A DIFFERENT UNIT");
+				printf("\n");
+				printf("\n");
+				printf("Convert from");
+				int currency;
+				scanf("%d", &currency);	
+				if (currency==1){
+						printf("INR=");
+						scanf("%f", &inr);
+						
+						printf("\n");	
+						printf("%0.3f INR is\n",inr);
+						Inr(inr);
+						printf("\n");
+						printf("\n");}
+						
+					else if (currency==2){
+						printf("USD");
+						
+						scanf("%f", &usd);
+						printf("\n");	
+						printf("%0.3f USD is\n",f);
+						Usd(usd);
+						printf("\n");
+						printf("\n");
+						}
+					
+					else if (currency==3){
+						printf("EUR");
+						scanf("%f", &eur);
+						printf("\n");	
+						printf("%0.3f EUR is\n",f);
+						Eur(eur);
+						printf("\n");
+						printf("\n");
+						}
+					
+					else if (currency==4){
+						printf("GBP");
+						
+						scanf("%f", &gbp);
+						printf("\n");	
+						printf("%0.3f GBP is\n",f);
+						Gbp(gbp);
+						printf("\n");
+						printf("\n");
+						}
+					
+					else if (currency==5){
+						printf("AUD");
+						
+						scanf("%f", &aud);
+						printf("\n");	
+						printf("%0.3f AUD is\n",f);
+						Aud(aud);
+						printf("\n");
+						printf("\n");
+						}
+					else if (currency==0){
+						break;}
+					else {
+						printf("Invalid,try again");
+						printf("\n");
+						break;}}}
+			
+			else if (n==6){
+			while(1){
+			
+				printf("------------------------------------------------------------------------------------------------------------------------");
+				printf("Degree=1\nRadian=2\nPRESS 0 TO DO CONVERSION OF A DIFFERENT UNIT");
+				printf("\n");
+				printf("\n");
+				int pa;
+				printf("Convert from");
+			
+				scanf("%d", &pa);	
+				if (pa==1){
+						printf("Degree");
+						scanf("%f", &deg);
+						
+						printf("\n");	
+						printf("%0.3f degrees is %0.3f radians\n",deg,deg*(pi/180));
+						
+						printf("\n");
+						printf("\n");}
+						
+					else if (pa==2){
+						printf("Radians");
+						
+						scanf("%f", &rad);
+						printf("\n");	
+						printf("%0.3f radians is %0.3f degrees\n",rad, rad*(180/pi));
+			
+						printf("\n");
+						printf("\n");
+						}
+					
+					 
+					else if (pa==0){
+						break;}
+					else {
+						printf("Invalid,try again");
+						printf("\n");
+						break;
+						
+						}}}
+				
+				
+			
+			
+			
+			
+			
+			
+				}
+					
+				
+				
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 
+		
+	
+	return 0;}
